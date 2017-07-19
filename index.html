@@ -1,91 +1,21 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>React - Template</title>
+    <title>React Markup Prev</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
-<style type="text/css">
-    h1{
-        text-align: center;
-        text-decoration: underline;
-    }
-    textarea{
-        resize: none;
-        width: 100%;
-        height: 70vh;
-    }
-    .markdown {
-        padding: 10px 5px;
-        resize: vertical;
-        overflow: auto;
-        width: 100%;
-        height: 564px;
-        margin: 0 auto;
-        display: block;
-        margin-bottom: 15px;
-    }
-
-
-</style>
 <body>
-    <h1>Markdown Previewer using ReactJS and Sass</h1>
+  <h1 id="test">Markdown Previewer using ReactJS and Sass<p style="font-family:monospace;font-size:13pt;">
+			  by <a href="https://www.facebook.com/r.meskali" target="_blank" style="font-size:13pt;text-decoration: none;">Reda Meskali</a>&nbsp&nbsp<a href="https://www.linkedin.com/in/reda-meskali-848747b2/" target="_blank"><i class="fa fa-linkedin"></i></a>
+</p></span></h1>
     <div id="container" class="container-fluid"></div>
-    <script type="text/babel">
-    
-    var MarkdownEditor = React.createClass({
-    
-    getInitialState: function() {
-    return {
-        content: "## Marked in browser\n\nRendered by **marked**."
-    };
-    },
-
-    markup: function(){
-        marked.setOptions({
-        renderer: new marked.Renderer(),
-        gfm: true,
-        tables: true,
-        breaks: false,
-        pedantic: false,
-        sanitize: true,
-        smartLists: true,
-        smartypants: false
-    })
-        var markup = marked(this.state.content,{sanitize:true})
-        //alert( marked('));
-        return {
-            __html: markup
-        }
-    },
-    
-    render: function(){
-        return (
-            <div>
-                <div className="col-md-6">
-                    <h3>Markdown :</h3>
-                    <textarea id="markdown" className="markdown" defaultValue={this.state.content}></textarea>
-                </div>
-                <div className="col-md-6">
-                    <h3>Preview :</h3>
-                    <div id="displayPreview" dangerouslySetInnerHTML={this.markup()}></div>
-                </div>
-            </div>
-    )
-    }
-})
-
-
-    ReactDOM.render(
-        <MarkdownEditor />,
-        document.getElementById('container')
-    )
-    </script>
 </body>
 </html>
