@@ -1,0 +1,24 @@
+/*SORRY FOR ALL THE LINKS IN HTML */
+body {
+  background-color: lavender;
+}
+body #test {
+  text-align: center;
+  text-shadow: 10px 10px 20px black;
+  font-family: "Playfair Display", serif;
+}
+body textarea {
+  resize: none;
+  width: 100%;
+  height: 80vh;
+  background-color: #444;
+  color: #00ff69;
+  font-family: monospace;
+}
+body #displayPreview {
+  overflow: scroll;
+  height: 659px;
+}
+body p {
+  margin-top: 15px;
+}
